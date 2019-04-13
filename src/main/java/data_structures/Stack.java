@@ -16,8 +16,6 @@ public class Stack<T> {
         }
     }
 
-
-
     public void push(T value) {
         increase();
         array[currentSize++] = value;
@@ -38,7 +36,7 @@ public class Stack<T> {
         return currentSize <= 0;
     }
 
-    public int getSize() {
+    public int size() {
         return currentSize;
     }
 
@@ -69,8 +67,6 @@ public class Stack<T> {
             array = Arrays.copyOf(array, newSize);
         }
     }
-
-
 
     @Override
     public String toString() {

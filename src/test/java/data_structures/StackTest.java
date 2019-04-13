@@ -47,16 +47,16 @@ class StackTest {
     }
 
     @Test
-    void getSize() {
+    void size() {
         Stack<Integer> stack = new Stack<>(22, 3, 6, 9, -15, 400);
-        assertEquals(stack.getSize(), 6);
+        assertEquals(stack.size(), 6);
         stack.pop();
         stack.pop();
-        assertEquals(stack.getSize(), 4);
+        assertEquals(stack.size(), 4);
         for(int i = 0; i < 512; i++) {
             stack.push(500);
         }
-        assertEquals(stack.getSize(), 516);
+        assertEquals(stack.size(), 516);
     }
 
     @Test
