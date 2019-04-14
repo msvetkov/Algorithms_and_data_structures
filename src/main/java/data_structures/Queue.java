@@ -55,6 +55,15 @@ public class Queue<T> {
         tail = 0;
     }
 
+    public boolean contains(T value) {
+        for (T obj : array) {
+            if (value.equals(obj)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void increase() {
         int newSize = size() + (size() << 1);
         T[] temp = (T[]) new Object[newSize];
